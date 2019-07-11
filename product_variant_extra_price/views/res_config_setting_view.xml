@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+    <record model="ir.ui.view" id="res_config_settings_view_form_inh_product_prices">
+        <field name="name">sale.res_config_settings_view_form.inh.product.prices</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+          <xpath expr="//div[@data-key='sale_management']/div" position="after">
+                      <div class="row mt16 o_settings_container">
+                          <div class="col-xs-12 col-md-6 o_setting_box">
+                               <div class="o_setting_right_pane">
+                                  <group>
+                                  <field name="number_price_field"/>
+                                  </group>
+                              </div>
+                          </div>
+                  </div>
+              </xpath>
+        </field>
+    </record>
+</data>
+</odoo>
